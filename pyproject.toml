@@ -1,0 +1,91 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-file-organizer"
+version = "0.1.0"
+description = "Organize your files with natural language instructions powered by AI"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "ai-file-organizer contributors" }]
+keywords = [
+  "file-organizer",
+  "ai",
+  "cli",
+  "productivity",
+  "openai",
+  "automation",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Utilities",
+  "Topic :: System :: Filesystems",
+]
+dependencies = [
+  "typer>=0.12",
+  "openai>=1.30",
+  "rich>=13.7",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "tomli-w>=1.0",
+  "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-asyncio>=0.23",
+  "ruff>=0.4",
+  "mypy>=1.10",
+]
+
+[project.scripts]
+file-org = "file_organizer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/ai-file-organizer"
+Repository = "https://github.com/yourusername/ai-file-organizer"
+"Bug Tracker" = "https://github.com/yourusername/ai-file-organizer/issues"
+Changelog = "https://github.com/yourusername/ai-file-organizer/releases"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/file_organizer"]
+
+# ---------------------------------------------------------------------------
+# Ruff
+# ---------------------------------------------------------------------------
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["file_organizer"]
+
+# ---------------------------------------------------------------------------
+# Mypy
+# ---------------------------------------------------------------------------
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+
+# ---------------------------------------------------------------------------
+# Pytest
+# ---------------------------------------------------------------------------
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"

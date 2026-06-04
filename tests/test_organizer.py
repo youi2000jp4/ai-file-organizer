@@ -3,14 +3,10 @@
 from __future__ import annotations
 
 from pathlib import Path
-from unittest.mock import AsyncMock, MagicMock, patch
-
-import pytest
 
 from file_organizer.config import Config
 from file_organizer.models import MoveOperation, OrganizePlan
 from file_organizer.organizer import Organizer, _human_size, _unique_destination
-
 
 # ---------------------------------------------------------------------------
 # Unit: helpers

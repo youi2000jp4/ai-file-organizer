@@ -10,7 +10,7 @@ from rich.console import Console
 
 from .config import Config
 from .llm import LLMClient
-from .models import ExecutionResult, FileInfo, MoveOperation, OrganizePlan
+from .models import ExecutionResult, FileInfo, OrganizePlan
 
 console = Console()
 

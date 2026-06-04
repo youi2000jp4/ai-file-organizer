@@ -5,7 +5,6 @@ from __future__ import annotations
 from pathlib import Path
 from unittest.mock import AsyncMock, MagicMock, patch
 
-import pytest
 from typer.testing import CliRunner
 
 from file_organizer.cli import app
@@ -47,8 +46,8 @@ def test_organize_empty_directory(tmp_path: Path) -> None:
         cfg.confirm_before_execute = False
         mock_cfg.return_value = cfg
 
-        with patch("file_organizer.cli.Organizer") as MockOrg:
-            instance = MockOrg.return_value
+        with patch("file_organizer.cli.Organizer") as mock_org:
+            instance = mock_org.return_value
             instance.scan_files.return_value = []
 
             result = runner.invoke(app, ["organize", "sort", str(tmp_path), "--yes"])
@@ -68,10 +67,10 @@ def test_organize_dry_run(tmp_path: Path) -> None:
         cfg.confirm_before_execute = False
         mock_cfg.return_value = cfg
 
-        with patch("file_organizer.cli.Organizer") as MockOrg:
+        with patch("file_organizer.cli.Organizer") as mock_org:
             from file_organizer.models import FileInfo
 
-            instance = MockOrg.return_value
+            instance = mock_org.return_value
             instance.scan_files.return_value = [
                 FileInfo(
                     name="photo.jpg",

@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from openai import AsyncOpenAI, OpenAI
+from openai import AsyncOpenAI
 
 from .config import Config
 from .models import FileInfo, MoveOperation, OrganizePlan

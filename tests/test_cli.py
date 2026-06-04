@@ -91,7 +91,9 @@ def test_organize_dry_run(tmp_path: Path) -> None:
                 dry_run=True,
             )
 
-            result = runner.invoke(app, ["organize", "move images", str(tmp_path), "--dry-run", "--yes"])
+            result = runner.invoke(
+                app, ["organize", "move images", str(tmp_path), "--dry-run", "--yes"]
+            )
 
     assert result.exit_code == 0
     assert not (tmp_path / "images" / "photo.jpg").exists()

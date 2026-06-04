@@ -60,9 +60,7 @@ def _build_user_message(
     truncated = len(files) > max_files
     shown = files[:max_files]
 
-    file_lines = "\n".join(
-        f"  - {f.relative_path} ({f.size_human})" for f in shown
-    )
+    file_lines = "\n".join(f"  - {f.relative_path} ({f.size_human})" for f in shown)
     truncation_note = (
         f"\n  [Note: showing {max_files} of {len(files)} files — only operate on shown files]\n"
         if truncated
@@ -93,9 +91,7 @@ class LLMClient:
         if not files:
             return OrganizePlan(moves=[], summary="No files found to organize.", warnings=[])
 
-        user_message = _build_user_message(
-            instruction, target_dir, files, self.config.max_files
-        )
+        user_message = _build_user_message(instruction, target_dir, files, self.config.max_files)
 
         response = await self._client.chat.completions.create(
             model=self.config.effective_model,

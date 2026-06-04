@@ -93,10 +93,14 @@ def _print_result(result: ExecutionResult) -> None:
 @app.command()
 def organize(
     instruction: str = typer.Argument(..., help="Natural language instruction (Japanese OK)"),
-    target: Optional[Path] = typer.Argument(default=None, help="Target directory [default: current dir]"),  # noqa: B008,UP045
+    target: Optional[Path] = typer.Argument(  # noqa: B008,UP045
+        default=None, help="Target directory [default: current dir]"
+    ),
     dry_run: bool = typer.Option(False, "--dry-run", "-n", help="Preview without moving files"),
     yes: bool = typer.Option(False, "--yes", "-y", help="Skip confirmation prompt"),
-    recursive: bool = typer.Option(False, "--recursive", "-r", help="Scan subdirectories recursively"),
+    recursive: bool = typer.Option(
+        False, "--recursive", "-r", help="Scan subdirectories recursively"
+    ),
     model: Optional[str] = typer.Option(None, "--model", "-m", help="Override LLM model"),  # noqa: UP045
     max_files: Optional[int] = typer.Option(None, "--max-files", help="Max files to send to LLM"),  # noqa: UP045
 ) -> None:

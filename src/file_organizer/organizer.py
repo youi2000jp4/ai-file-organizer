@@ -70,7 +70,7 @@ class Organizer:
             if _matches_any(path.name, self.config.exclude_patterns):
                 continue
             # Skip hidden files
-            if any(part.startswith(".") for part in path.parts[len(directory.parts):]):
+            if any(part.startswith(".") for part in path.parts[len(directory.parts) :]):
                 continue
 
             rel = path.relative_to(directory)

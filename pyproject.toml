@@ -53,10 +53,10 @@ dev = [
 file-org = "file_organizer.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/yourusername/ai-file-organizer"
-Repository = "https://github.com/yourusername/ai-file-organizer"
-"Bug Tracker" = "https://github.com/yourusername/ai-file-organizer/issues"
-Changelog = "https://github.com/yourusername/ai-file-organizer/releases"
+Homepage = "https://github.com/youi2000jp4/ai-file-organizer"
+Repository = "https://github.com/youi2000jp4/ai-file-organizer"
+"Bug Tracker" = "https://github.com/youi2000jp4/ai-file-organizer/issues"
+Changelog = "https://github.com/youi2000jp4/ai-file-organizer/releases"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/file_organizer"]

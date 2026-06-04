@@ -4,7 +4,7 @@
 
 [![PyPI version](https://img.shields.io/pypi/v/ai-file-organizer?color=blue)](https://pypi.org/project/ai-file-organizer/)
 [![Python](https://img.shields.io/pypi/pyversions/ai-file-organizer)](https://pypi.org/project/ai-file-organizer/)
-[![CI](https://github.com/yourusername/ai-file-organizer/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/ai-file-organizer/actions/workflows/ci.yml)
+[![CI](https://github.com/youi2000jp4/ai-file-organizer/actions/workflows/ci.yml/badge.svg)](https://github.com/youi2000jp4/ai-file-organizer/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Downloads](https://img.shields.io/pypi/dm/ai-file-organizer)](https://pypi.org/project/ai-file-organizer/)
 
@@ -55,13 +55,13 @@ pip install ai-file-organizer
 
 ```bash
 # Coming soon — tap will be added after first PyPI release
-brew install yourusername/tap/ai-file-organizer
+brew install youi2000jp4/tap/ai-file-organizer
 ```
 
 ### From source
 
 ```bash
-git clone https://github.com/yourusername/ai-file-organizer.git
+git clone https://github.com/youi2000jp4/ai-file-organizer.git
 cd ai-file-organizer
 pip install -e ".[dev]"
 ```
@@ -178,7 +178,7 @@ max_files = 50
 Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ```bash
-git clone https://github.com/yourusername/ai-file-organizer.git
+git clone https://github.com/youi2000jp4/ai-file-organizer.git
 cd ai-file-organizer
 pip install -e ".[dev]"
 pytest          # run tests

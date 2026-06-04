@@ -6,7 +6,7 @@ First off, thank you for considering contributing! 🎉
 
 ```bash
 # Clone and install in editable mode with dev deps
-git clone https://github.com/yourusername/ai-file-organizer.git
+git clone https://github.com/youi2000jp4/ai-file-organizer.git
 cd ai-file-organizer
 pip install -e ".[dev]"
 
@@ -24,11 +24,11 @@ mypy src
 ## How to contribute
 
 ### Reporting bugs
-Open a [Bug Report](https://github.com/yourusername/ai-file-organizer/issues/new?template=bug_report.yml).  
+Open a [Bug Report](https://github.com/youi2000jp4/ai-file-organizer/issues/new?template=bug_report.yml).  
 Include: OS, Python version, `file-org --version`, and the exact command you ran.
 
 ### Requesting features
-Open a [Feature Request](https://github.com/yourusername/ai-file-organizer/issues/new?template=feature_request.yml).
+Open a [Feature Request](https://github.com/youi2000jp4/ai-file-organizer/issues/new?template=feature_request.yml).
 
 ### Pull requests
 

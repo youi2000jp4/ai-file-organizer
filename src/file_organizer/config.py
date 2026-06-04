@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Literal
+from typing import Any, Literal
 
 try:
     import tomllib
@@ -82,7 +82,7 @@ class Config(BaseSettings):
 
 def load_config() -> Config:
     """Load config from file and environment variables."""
-    overrides: dict[str, object] = {}
+    overrides: dict[str, Any] = {}
 
     if CONFIG_FILE.exists():
         with open(CONFIG_FILE, "rb") as f:
@@ -102,7 +102,7 @@ def load_config() -> Config:
 def save_config(config: Config) -> None:
     """Persist config to TOML file (excludes secrets)."""
     CONFIG_DIR.mkdir(parents=True, exist_ok=True)
-    data: dict[str, object] = {
+    data: dict[str, Any] = {
         "model": config.model,
         "provider": config.provider,
         "max_files": config.max_files,

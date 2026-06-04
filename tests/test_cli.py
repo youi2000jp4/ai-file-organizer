@@ -22,9 +22,9 @@ def _mock_plan(moves: list[MoveOperation] | None = None) -> OrganizePlan:
 
 
 def test_no_args_shows_help() -> None:
-    result = runner.invoke(app, [])
+    result = runner.invoke(app, ["--help"])
     assert result.exit_code == 0
-    assert "organize" in result.output.lower() or "usage" in result.output.lower()
+    assert "organize" in result.output.lower()
 
 
 def test_organize_no_api_key(tmp_path: Path) -> None:

@@ -2,11 +2,8 @@
 
 **Organize any folder with a single natural language command — in English or Japanese.**
 
-[![PyPI version](https://img.shields.io/pypi/v/ai-file-organizer?color=blue)](https://pypi.org/project/ai-file-organizer/)
-[![Python](https://img.shields.io/pypi/pyversions/ai-file-organizer)](https://pypi.org/project/ai-file-organizer/)
 [![CI](https://github.com/youi2000jp4/ai-file-organizer/actions/workflows/ci.yml/badge.svg)](https://github.com/youi2000jp4/ai-file-organizer/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Downloads](https://img.shields.io/pypi/dm/ai-file-organizer)](https://pypi.org/project/ai-file-organizer/)
 
 ```
 $ file-org "ダウンロードフォルダを種類別に整理して" ~/Downloads --dry-run

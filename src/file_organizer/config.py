@@ -96,7 +96,7 @@ def load_config() -> Config:
             local_data = tomllib.load(f)
         overrides.update(local_data)
 
-    return Config(**overrides)
+    return Config(_env_file=[CONFIG_DIR / ".env", Path(".env")], **overrides)  # type: ignore[call-arg]
 
 
 def save_config(config: Config) -> None:
